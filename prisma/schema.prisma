@@ -58,6 +58,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
+  passwordHash  String?
 
   // Gamification Stats
   xp            Int       @default(0)
