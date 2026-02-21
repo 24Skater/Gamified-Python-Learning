@@ -142,21 +142,21 @@
 > After the critical audit fixes are resolved, build in this order.
 > Each step has a **TDD gate** — a test that must pass before moving on.
 
-### Step 1: Scaffold the Monorepo + Tooling
+### Step 1: Scaffold the Monorepo + Tooling — COMPLETE
 
-- [ ] Initialize Git repo, create `.gitignore`
-- [ ] Set up Turborepo with `apps/web` (Next.js) and `apps/api` (FastAPI)
-- [ ] Add root scripts: `dev`, `build`, `lint`, `test`
-- [ ] Copy `.env.example` → `.env`, configure SQLite default
-- **TDD gate:** `npm run dev` starts both services; `npm run lint` passes on empty project
+- [x] Initialize Git repo, create `.gitignore`
+- [x] Set up Turborepo with `apps/web` (Next.js) and `apps/api` (FastAPI)
+- [x] Add root scripts: `dev`, `build`, `lint`, `test`
+- [x] Copy `.env.example` → `.env`, configure SQLite default
+- **TDD gate:** PASSED — `npm run dev` starts both services; `npm run lint` passes
 
-### Step 2: Database + Auth (The Skeleton)
+### Step 2: Database + Auth (The Skeleton) — COMPLETE
 
-- [ ] Write complete Prisma schema (Game models + NextAuth models) in `prisma/schema.prisma`
-- [ ] Run `prisma migrate dev` to generate SQLite `dev.db`
-- [ ] Configure NextAuth with Credentials provider (JWT strategy)
-- [ ] Build login page, session middleware, and `/me` API route
-- **TDD gate:** Integration test — register → login → `GET /me` returns user with `xp: 0, level: 1`
+- [x] Write complete Prisma schema (Game models + NextAuth models) in `prisma/schema.prisma`
+- [x] Run `prisma migrate dev` to generate SQLite `dev.db`
+- [x] Configure NextAuth with Credentials provider (JWT strategy)
+- [x] Build login page, session middleware, and `/me` API route
+- **TDD gate:** PASSED — register → login → `GET /me` returns user with `xp: 0, level: 1`
 
 ### Step 3: Pyodide Integration (The Engine)
 
