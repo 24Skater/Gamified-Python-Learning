@@ -1,0 +1,21 @@
+{
+  "name": "code-quest-python",
+  "private": true,
+  "packageManager": "npm@11.7.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "prisma": "^6.19.2",
+    "turbo": "^2"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.2"
+  }
+}

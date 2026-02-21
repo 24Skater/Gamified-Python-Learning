@@ -1,0 +1,51 @@
+# --- Environment & Secrets ---
+.env
+.env.local
+.env.production
+.env.*.local
+
+# --- Dependencies ---
+node_modules/
+.pnp/
+.pnp.js
+
+# --- Next.js ---
+.next/
+out/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+
+# --- Database ---
+*.db
+*.db-journal
+prisma/*.db
+
+# --- Build Output ---
+dist/
+build/
+.turbo/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Testing ---
+coverage/
+.pytest_cache/
+htmlcov/
+
+# --- Logs ---
+*.log
+npm-debug.log*

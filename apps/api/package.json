@@ -1,0 +1,11 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "python -m uvicorn main:app --reload --port 8000",
+    "build": "echo \"No build step for Python API\"",
+    "lint": "echo \"Python linting not configured yet\"",
+    "test": "echo \"Python tests not configured yet\""
+  }
+}
