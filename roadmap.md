@@ -77,10 +77,10 @@
 
 | Item | Blocks Step | Impact If Missing | Status |
 |:---|:---|:---|:---|
-| **UI Wireframes / Component Map** | Step 3 (editor layout), Step 4 (quest layout) | Agent will guess panel sizes, component hierarchy, responsive behavior | Pending |
-| **Error Handling & "Glitch Report" Format** | Step 4 (grading feedback UI) | Error display will be bare-bones; no hint escalation logic | Pending |
-| Curriculum Outline (Content Roadmap) | Step 4 (only need 1-2 quests for MVP) | Not blocking — "The Guardian's Password" example exists | Pending |
-| User Stories / User Flows | Steps 3-5 (implicit in build prompts) | Not blocking — flows are defined in step prompts | Pending |
+| **UI Wireframes / Component Map** | Step 3 (editor layout), Step 4 (quest layout) | Agent will guess panel sizes, component hierarchy, responsive behavior | Done — `UI_COMPONENT_MAP.md` |
+| **Error Handling & "Glitch Report" Format** | Step 4 (grading feedback UI) | Error display will be bare-bones; no hint escalation logic | Done — `GLITCH_REPORT_SPEC.md` |
+| Curriculum Outline (Content Roadmap) | Step 4 (only need 1-2 quests for MVP) | Not blocking — "The Guardian's Password" example exists | Done — `CURRICULUM_OUTLINE.md` |
+| User Stories / User Flows | Steps 3-5 (implicit in build prompts) | Not blocking — flows are defined in step prompts | Done — `USER_FLOWS.md` |
 
 **Minimum to proceed to Step 3:** UI Component Map + Glitch Report format.
 **Can defer to post-MVP:** Full curriculum outline + formal user stories.
@@ -208,3 +208,7 @@ PHASE 0 (Done)        PHASE 1 (MVP Build)                            PHASE 2    
 | `.env.example` | Copy-and-go env template for contributors | 0 |
 | `pre_dev_checklist.md` | Task tracker with checkboxes + MVP build plan | 0 |
 | `roadmap.md` | This file — high-level phased dependency map | 0 |
+| `UI_COMPONENT_MAP.md` | Design system, screen layouts, component specs, responsive breakpoints | Docs Checkpoint |
+| `CURRICULUM_OUTLINE.md` | 5 levels × 6 quests, narrative arc, badge definitions | Docs Checkpoint |
+| `USER_FLOWS.md` | Personas, 6 core user flows, error/edge case flows | Docs Checkpoint |
+| `GLITCH_REPORT_SPEC.md` | Error type mapping, hint escalation, success feedback, guest mode | Docs Checkpoint |

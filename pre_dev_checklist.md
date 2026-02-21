@@ -79,7 +79,7 @@
 
 ## Medium Priority — Needed Before Phase 2
 
-- [ ] **UI Wireframes or Component Map**
+- [x] **UI Wireframes or Component Map** → See `UI_COMPONENT_MAP.md`
   - Quest selection / level map screen
   - Quest play screen (narrative panel, code editor, terminal — three-panel layout)
   - Profile / XP dashboard
@@ -87,19 +87,19 @@
   - Level-up celebration modal
   - RPG narrative presentation style (dialogue boxes, scrolling text, character sprites)
 
-- [ ] **Curriculum Outline (Content Roadmap)**
+- [x] **Curriculum Outline (Content Roadmap)** → See `CURRICULUM_OUTLINE.md`
   - Total number of levels and quests per level
   - Python concepts mapped to levels (e.g., Level 1 = `print`/variables, Level 2 = conditionals, Level 3 = loops)
   - "Final Boss" project description for each level
   - Narrative arc for "The Script-Kitten Chronicles"
 
-- [ ] **User Stories / User Flows**
+- [x] **User Stories / User Flows** → See `USER_FLOWS.md`
   - New user: homepage → sign up → Level 1 Quest 1 → complete → XP toast → next quest
   - Returning user: log in → dashboard with progress → continue from last quest
   - Leaderboard viewer: view rankings → filter by level
   - Content contributor: fork → add quest `.md` + test → submit PR
 
-- [ ] **Error Handling & "Glitch Report" Format**
+- [x] **Error Handling & "Glitch Report" Format** → See `GLITCH_REPORT_SPEC.md`
   - How Python tracebacks map to kid-friendly messages
   - Hint tiers (first attempt = vague hint, third attempt = stronger hint?)
   - Glitch Report UI component design
