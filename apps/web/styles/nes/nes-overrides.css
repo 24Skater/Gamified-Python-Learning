@@ -1,0 +1,150 @@
+/*
+ * NES Arcade UI — Overrides & Accessibility
+ *
+ * Tunes NES.css defaults for dark backgrounds, consistent spacing,
+ * and keyboard-accessible focus rings.
+ */
+
+/* ── Global dark-mode base ───────────────────────────────────── */
+
+.nes-container {
+  background: var(--nes-surface);
+  color: var(--nes-fg);
+  padding: var(--nes-space-3);
+}
+
+.nes-container.is-dark {
+  background: var(--nes-surface);
+  color: var(--nes-fg);
+}
+
+.nes-container.with-title > .title {
+  background-color: var(--nes-bg);
+  color: var(--nes-fg);
+  font-family: var(--nes-font-display);
+  font-size: var(--nes-text-sm);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+
+.nes-btn {
+  font-family: var(--nes-font-display);
+  font-size: var(--nes-text-xs);
+  padding: var(--nes-space-2) var(--nes-space-3);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  line-height: var(--nes-leading-normal);
+}
+
+.nes-btn:hover {
+  transform: translateY(-2px);
+}
+
+.nes-btn:active {
+  transform: translateY(1px);
+}
+
+.nes-btn.is-disabled,
+.nes-btn[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+/* ── Focus rings (keyboard accessibility) ────────────────────── */
+
+.nes-btn:focus-visible,
+.nes-input:focus-visible,
+.nes-textarea:focus-visible,
+.nes-select:focus-visible,
+.nes-progress:focus-visible,
+a:focus-visible {
+  outline: var(--nes-focus-width) solid var(--nes-focus-color);
+  outline-offset: var(--nes-focus-offset);
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Form fields ─────────────────────────────────────────────── */
+
+.nes-input,
+.nes-textarea {
+  background: var(--nes-surface-alt);
+  color: var(--nes-fg);
+  font-family: var(--nes-font-body);
+  font-size: var(--nes-text-base);
+  padding: var(--nes-space-2);
+  line-height: var(--nes-leading-normal);
+}
+
+.nes-input::placeholder,
+.nes-textarea::placeholder {
+  color: var(--nes-muted);
+}
+
+.nes-select {
+  background: var(--nes-surface-alt);
+  color: var(--nes-fg);
+}
+
+.nes-checkbox,
+.nes-radio {
+  vertical-align: middle;
+}
+
+/* ── Progress bars ───────────────────────────────────────────── */
+
+.nes-progress {
+  height: 24px;
+  border-image-outset: 2px;
+}
+
+/* ── Dialogs / Alerts ────────────────────────────────────────── */
+
+.nes-dialog {
+  background: var(--nes-surface);
+  color: var(--nes-fg);
+}
+
+/* ── Badges ──────────────────────────────────────────────────── */
+
+.nes-badge {
+  font-family: var(--nes-font-display);
+  font-size: var(--nes-text-xs);
+  white-space: nowrap;
+}
+
+/* ── Lists ───────────────────────────────────────────────────── */
+
+.nes-list {
+  color: var(--nes-fg);
+}
+
+/* ── Text / Typography helpers ───────────────────────────────── */
+
+.nes-text.is-primary  { color: var(--nes-primary); }
+.nes-text.is-success  { color: var(--nes-success); }
+.nes-text.is-warning  { color: var(--nes-warning); }
+.nes-text.is-error    { color: var(--nes-danger);  }
+.nes-text.is-disabled { color: var(--nes-disabled); }
+
+/* ── Icons sizing ────────────────────────────────────────────── */
+
+.nes-icon-sm { width: 16px; height: 16px; }
+.nes-icon-md { width: 24px; height: 24px; }
+.nes-icon-lg { width: 32px; height: 32px; }
+.nes-icon-xl { width: 48px; height: 48px; }
+
+/* ── Scrollbar (NES feel) ────────────────────────────────────── */
+
+.nes-container::-webkit-scrollbar {
+  width: 8px;
+}
+.nes-container::-webkit-scrollbar-track {
+  background: var(--nes-surface);
+}
+.nes-container::-webkit-scrollbar-thumb {
+  background: var(--nes-muted);
+}

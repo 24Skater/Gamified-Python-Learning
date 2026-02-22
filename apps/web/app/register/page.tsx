@@ -52,7 +52,7 @@ export default function RegisterPage() {
         return;
       }
 
-      router.push("/");
+      router.push("/quest");
       router.refresh();
     } catch {
       setLoading(false);

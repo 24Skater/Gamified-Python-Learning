@@ -130,22 +130,25 @@ Earn **XP**, level up, unlock **badges**, climb the **leaderboard**, and show of
 code-quest-python/
 ├── apps/
 │   ├── web/                    # 🌐 Next.js Frontend (App Router + Tailwind)
-│   │   ├── app/                #    Routes & layouts
-│   │   ├── components/         #    UI: QuestCard, Leaderboard, Terminal
-│   │   ├── hooks/              #    usePyodide, useGameState
-│   │   └── lib/                #    Utilities: quest parser, auth config
+│   │   ├── app/                #    Routes: /, /login, /register, /quest, /quest/[id]
+│   │   │   └── api/            #    API routes: auth, me, quests/[id]/submit
+│   │   ├── components/         #    CodeEditor, TerminalOutput, GlitchReport, QuestPlayClient, QuestSuccess
+│   │   ├── hooks/              #    usePyodide (in-browser Python execution)
+│   │   └── lib/                #    questParser, testRunner, errorParser, auth, prisma
 │   │
 │   └── api/                    # ⚡ FastAPI Backend (Python)
-│       ├── main.py             #    App entry point + CORS
+│       ├── main.py             #    App entry point + CORS + health check
 │       ├── routes/             #    auth, users, quests, achievements
 │       └── grading/            #    Server-side code verification
 │
 ├── content/                    # 📖 Quest Repository (Markdown + Python tests)
-│   └── level_1/                #    Level 1 quests
+│   └── level_1/                #    quest_01.md, quest_02.md, test_01.py, test_02.py
 │
 ├── prisma/                     # 🗃️ Database Schema & Migrations
-│   └── schema.prisma           #    7 models (User, Quest, Achievements, Auth)
+│   ├── schema.prisma           #    7 models (User, Account, Session, QuestAttempt, Achievement, etc.)
+│   └── migrations/             #    SQLite migrations
 │
+├── prompts/                    # 🤖 Agent prompts for MVP build steps
 ├── turbo.json                  #    Turborepo pipeline config
 ├── package.json                #    Root workspace config
 ├── .env.example                #    Environment variable template
@@ -204,6 +207,21 @@ This starts **both** servers simultaneously via Turborepo:
 | **API** | [http://localhost:8000](http://localhost:8000) | FastAPI backend |
 | **API Docs** | [http://localhost:8000/docs](http://localhost:8000/docs) | Swagger UI |
 | **Health Check** | [http://localhost:8000/api/v1/health](http://localhost:8000/api/v1/health) | `{"status": "ok"}` |
+
+<br />
+
+## ✅ What's Implemented
+
+| Feature | Status |
+|:--------|:-------|
+| **Auth** | Register, login, JWT sessions, `GET /api/me` |
+| **Quest Play** | Load quests from `/content`, Monaco editor, Run button |
+| **Pyodide** | In-browser Python execution, instant feedback |
+| **GlitchReport** | Error display with hint escalation |
+| **Submit Flow** | Client-side Pyodide grading + server-side verification |
+| **Content** | Example quests in `content/level_1/` |
+
+**Next:** Step 5 — XP system, level-up rewards, achievements.
 
 <br />
 
@@ -306,22 +324,30 @@ git push origin feature/amazing-quest
 | Document | What It Covers |
 |:---------|:---------------|
 | [`pdr_cursor_spec.md`](pdr_cursor_spec.md) | Master technical spec — stack, architecture, game rules |
+| [`roadmap.md`](roadmap.md) | Phase tracking, MVP steps, dependencies |
+| [`pre_dev_checklist.md`](pre_dev_checklist.md) | Task-level checklist, critical fixes |
 | [`DATA_MODEL.md`](DATA_MODEL.md) | Complete Prisma schema with all 7 models |
 | [`API_SPECIFICATION.md`](API_SPECIFICATION.md) | FastAPI endpoints, request/response shapes |
 | [`QUEST_FORMAT_SPEC.md`](QUEST_FORMAT_SPEC.md) | Quest Markdown format + test suite structure |
 | [`ENV_SPECIFICATION.md`](ENV_SPECIFICATION.md) | All environment variables with descriptions |
 | [`auth_spec.md`](auth_spec.md) | NextAuth.js configuration + Guest Mode |
 | [`adr.md`](adr.md) | Architecture Decision Records (8 ADRs) |
+| [`UI_COMPONENT_MAP.md`](UI_COMPONENT_MAP.md) | UI wireframes, component hierarchy |
+| [`GLITCH_REPORT_SPEC.md`](GLITCH_REPORT_SPEC.md) | Error display format, hint escalation |
+| [`CURRICULUM_OUTLINE.md`](CURRICULUM_OUTLINE.md) | Content roadmap, quest progression |
+| [`USER_FLOWS.md`](USER_FLOWS.md) | User stories and flows |
 
 <br />
 
 ## 🗺️ Roadmap
 
 - [x] **Step 1** — Scaffold monorepo + tooling
-- [ ] **Step 2** — Database migrations + NextAuth setup
-- [ ] **Step 3** — Pyodide integration (in-browser Python)
-- [ ] **Step 4** — Quest loader + hybrid grading engine
+- [x] **Step 2** — Database migrations + NextAuth setup (login, register, JWT sessions)
+- [x] **Step 3** — Pyodide integration (in-browser Python, Monaco editor, GlitchReport)
+- [x] **Step 4** — Quest loader + hybrid grading engine (quest parser, test runner, submit flow)
 - [ ] **Step 5** — XP system + level-up rewards
+
+See [`roadmap.md`](roadmap.md) for detailed phase tracking and [`pre_dev_checklist.md`](pre_dev_checklist.md) for task-level status.
 
 <br />
 

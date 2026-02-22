@@ -86,24 +86,23 @@
 
 ---
 
-### MVP Step 3: Pyodide Integration (The Engine) — NEXT UP
+### MVP Step 3: Pyodide Integration (The Engine) — COMPLETE
 
-**Dependencies:** Step 2 complete. UI Component Map recommended.
+**Dependencies:** Step 2 complete. UI Component Map complete.
 
 | What | Status | Driven By |
 |:---|:---|:---|
-| `usePyodide` hook (load WASM, expose `runPython`) | Pending | `pdr_cursor_spec.md` Section 5B, `adr.md` ADR 001 |
-| Monaco code editor component | Pending | `pdr_cursor_spec.md` Section 5B |
-| Terminal output component | Pending | UI Component Map (to be created) |
-| Wire "Run" button → Pyodide → Terminal | Pending | `pdr_cursor_spec.md` Section 5B |
+| `usePyodide` hook (load WASM, expose `runPython`) | Done | `pdr_cursor_spec.md` Section 5B, `adr.md` ADR 001 |
+| Monaco code editor component | Done | `UI_COMPONENT_MAP.md` Section 4 |
+| Terminal output + GlitchReport component | Done | `UI_COMPONENT_MAP.md` Section 4, `GLITCH_REPORT_SPEC.md` |
+| Three-panel quest play screen layout (responsive) | Done | `UI_COMPONENT_MAP.md` Sections 4, 11 |
+| Wire "Run" button → Pyodide → Terminal | Done | `pdr_cursor_spec.md` Section 5B |
 
-**TDD Gate:** Type `print("hello")` → terminal shows `hello`.
-
-**Out of scope:** Quest loading, grading, XP, any backend calls.
+**TDD Gate:** PASSED — `print("hello")` → terminal shows `hello`. Errors render GlitchReport.
 
 ---
 
-### MVP Step 4: Quest Loader + Grading (The Core Loop) — Blocked by Step 3
+### MVP Step 4: Quest Loader + Grading (The Core Loop) — NEXT UP
 
 **Dependencies:** Step 3 complete. Glitch Report format needed.
 

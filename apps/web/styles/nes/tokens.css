@@ -1,0 +1,69 @@
+/*
+ * NES Arcade UI — Design Tokens
+ *
+ * Color palette inspired by the NES PPU, mapped to semantic roles.
+ * Typography references the CSS variables already set by next/font/google
+ * in layout.tsx (--font-display, --font-sans, --font-mono).
+ */
+
+:root {
+  /* ── Palette (NES-inspired) ────────────────────────────────── */
+  --nes-black:        #212529;
+  --nes-white:        #f8f9fa;
+  --nes-dark:         #111215;
+  --nes-light:        #e9ecef;
+  --nes-primary:      #209cee;  /* NES sky-blue */
+  --nes-success:      #92cc41;  /* NES green */
+  --nes-warning:      #f7d51d;  /* NES gold */
+  --nes-danger:       #e76e55;  /* NES red */
+  --nes-disabled:     #adafbc;
+
+  /* ── Semantic mapping ──────────────────────────────────────── */
+  --nes-bg:           var(--nes-dark);
+  --nes-fg:           var(--nes-white);
+  --nes-border:       var(--nes-black);
+  --nes-accent:       var(--nes-primary);
+  --nes-muted:        #6c757d;
+  --nes-surface:      #1a1d23;
+  --nes-surface-alt:  #24272e;
+
+  /* ── Spacing scale (px) ────────────────────────────────────── */
+  --nes-space-1:  4px;
+  --nes-space-2:  8px;
+  --nes-space-3:  16px;
+  --nes-space-4:  24px;
+  --nes-space-5:  32px;
+  --nes-space-6:  48px;
+  --nes-space-7:  64px;
+
+  /* ── Border ────────────────────────────────────────────────── */
+  --nes-border-width: 4px;
+  --nes-radius:       0px;       /* boxy by default */
+  --nes-radius-sm:    2px;       /* subtle rounding for small elements */
+
+  /* ── Typography ────────────────────────────────────────────── */
+  --nes-font-display: var(--font-display), "Press Start 2P", cursive;
+  --nes-font-body:    var(--font-sans), system-ui, -apple-system, sans-serif;
+  --nes-font-mono:    var(--font-mono), "JetBrains Mono", ui-monospace, monospace;
+
+  --nes-text-xs:   0.625rem;   /* 10px */
+  --nes-text-sm:   0.75rem;    /* 12px */
+  --nes-text-base: 0.875rem;   /* 14px — body */
+  --nes-text-lg:   1rem;       /* 16px */
+  --nes-text-xl:   1.25rem;    /* 20px */
+  --nes-text-2xl:  1.5rem;     /* 24px */
+  --nes-text-3xl:  2rem;       /* 32px */
+
+  --nes-leading-tight:  1.3;
+  --nes-leading-normal: 1.6;
+  --nes-leading-loose:  1.8;
+
+  /* ── Shadows (pixel-style) ─────────────────────────────────── */
+  --nes-shadow:      4px 4px 0px var(--nes-black);
+  --nes-shadow-sm:   2px 2px 0px var(--nes-black);
+
+  /* ── Focus ring ────────────────────────────────────────────── */
+  --nes-focus-color:  var(--nes-primary);
+  --nes-focus-width:  3px;
+  --nes-focus-offset: 2px;
+}

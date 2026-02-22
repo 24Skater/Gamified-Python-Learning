@@ -158,12 +158,12 @@
 - [x] Build login page, session middleware, and `/me` API route
 - **TDD gate:** PASSED — register → login → `GET /me` returns user with `xp: 0, level: 1`
 
-### Step 3: Pyodide Integration (The Engine)
+### Step 3: Pyodide Integration (The Engine) — COMPLETE
 
-- [ ] Create the `usePyodide` hook (loads WASM bundle, exposes `runPython(code)`)
-- [ ] Build minimal code editor (Monaco) + output terminal component
-- [ ] Wire "Run" button to execute code via Pyodide and display `stdout`/`stderr`
-- **TDD gate:** Component test — type `print("hello")` → terminal shows `hello`
+- [x] Create the `usePyodide` hook (loads WASM bundle, exposes `runPython(code)`)
+- [x] Build minimal code editor (Monaco) + output terminal component
+- [x] Wire "Run" button to execute code via Pyodide and display `stdout`/`stderr`
+- **TDD gate:** PASSED — type `print("hello")` → terminal shows `hello`
 
 ### Step 4: Quest Loader + Grading (The Core Loop)
 

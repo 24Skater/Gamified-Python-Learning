@@ -1,0 +1,7 @@
+/*
+ * NES Arcade UI — Barrel import
+ * Order matters: base library → tokens → overrides
+ */
+@import "nes.css/css/nes.min.css";
+@import "./tokens.css";
+@import "./nes-overrides.css";
