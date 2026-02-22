@@ -18,12 +18,25 @@
   --color-card-bg: var(--card-bg);
   --color-input-bg: var(--input-bg);
   --color-input-border: var(--input-border);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --shadow-neon-purple: 0 0 12px rgba(139, 92, 246, 0.5);
+  --shadow-neon-green: 0 0 12px rgba(52, 211, 153, 0.5);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

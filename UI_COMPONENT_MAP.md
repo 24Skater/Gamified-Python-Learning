@@ -36,11 +36,11 @@ The visual identity is **dark mode with neon Purple/Green accents** — a "hacke
 
 | Role | Font | Tailwind Class | Rationale |
 |:---|:---|:---|:---|
-| **Display / Headings** | Orbitron | `font-display` | Geometric, futuristic — fits the cyber RPG theme without sacrificing readability |
+| **Display / Headings** | Press Start 2P | `font-display` | Retro pixel-art aesthetic — immediately signals "this is a game" and reinforces the RPG theme. Use at `text-xl` or larger for readability. |
 | **Body Text** | Inter | `font-sans` (default) | Clean, highly legible at small sizes — ideal for ages 8-14 reading instructions |
 | **Code / Terminal** | JetBrains Mono | `font-mono` | Designed for code readability; distinct `0`/`O` and `1`/`l` glyphs |
 
-**Font loading:** Use `next/font/google` for Orbitron and Inter. JetBrains Mono is loaded for the Monaco editor theme and terminal output.
+**Font loading:** Use `next/font/google` for Press Start 2P and Inter. JetBrains Mono is loaded for the Monaco editor theme and terminal output. Note: Press Start 2P renders poorly below ~18px — always pair it with `text-xl` or larger. For smaller UI labels that need a game feel, fall back to Inter with `uppercase tracking-wider font-bold`.
 
 **Scale:** Minimum body text size of `text-base` (16px) for readability by children. Headings use `text-xl` to `text-3xl`. Quest instructions use `text-lg` (18px) for comfortable reading.
 

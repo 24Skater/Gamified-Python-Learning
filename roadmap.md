@@ -70,10 +70,9 @@
 
 ---
 
-### DOCUMENTATION CHECKPOINT — Before Step 3 — NEXT UP
+### DOCUMENTATION CHECKPOINT — Before Step 3 — COMPLETE
 
-> These Medium Priority checklist items become blockers here. Without them,
-> Steps 3-5 will rely on agent interpretation rather than defined specs.
+> These Medium Priority checklist items have been resolved.
 
 | Item | Blocks Step | Impact If Missing | Status |
 |:---|:---|:---|:---|
@@ -87,7 +86,7 @@
 
 ---
 
-### MVP Step 3: Pyodide Integration (The Engine) — Blocked by Step 2 + Docs Checkpoint
+### MVP Step 3: Pyodide Integration (The Engine) — NEXT UP
 
 **Dependencies:** Step 2 complete. UI Component Map recommended.
 
