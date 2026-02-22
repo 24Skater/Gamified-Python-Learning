@@ -323,19 +323,19 @@ git push origin feature/amazing-quest
 
 | Document | What It Covers |
 |:---------|:---------------|
-| [`pdr_cursor_spec.md`](pdr_cursor_spec.md) | Master technical spec — stack, architecture, game rules |
-| [`roadmap.md`](roadmap.md) | Phase tracking, MVP steps, dependencies |
-| [`pre_dev_checklist.md`](pre_dev_checklist.md) | Task-level checklist, critical fixes |
-| [`DATA_MODEL.md`](DATA_MODEL.md) | Complete Prisma schema with all 7 models |
-| [`API_SPECIFICATION.md`](API_SPECIFICATION.md) | FastAPI endpoints, request/response shapes |
-| [`QUEST_FORMAT_SPEC.md`](QUEST_FORMAT_SPEC.md) | Quest Markdown format + test suite structure |
-| [`ENV_SPECIFICATION.md`](ENV_SPECIFICATION.md) | All environment variables with descriptions |
-| [`auth_spec.md`](auth_spec.md) | NextAuth.js configuration + Guest Mode |
-| [`adr.md`](adr.md) | Architecture Decision Records (8 ADRs) |
-| [`UI_COMPONENT_MAP.md`](UI_COMPONENT_MAP.md) | UI wireframes, component hierarchy |
-| [`GLITCH_REPORT_SPEC.md`](GLITCH_REPORT_SPEC.md) | Error display format, hint escalation |
-| [`CURRICULUM_OUTLINE.md`](CURRICULUM_OUTLINE.md) | Content roadmap, quest progression |
-| [`USER_FLOWS.md`](USER_FLOWS.md) | User stories and flows |
+| [`pdr_cursor_spec.md`](docs/pdr_cursor_spec.md) | Master technical spec — stack, architecture, game rules |
+| [`roadmap.md`](docs/roadmap.md) | Phase tracking, MVP steps, dependencies |
+| [`pre_dev_checklist.md`](docs/pre_dev_checklist.md) | Task-level checklist, critical fixes |
+| [`DATA_MODEL.md`](docs/DATA_MODEL.md) | Complete Prisma schema with all 7 models |
+| [`API_SPECIFICATION.md`](docs/API_SPECIFICATION.md) | FastAPI endpoints, request/response shapes |
+| [`QUEST_FORMAT_SPEC.md`](docs/QUEST_FORMAT_SPEC.md) | Quest Markdown format + test suite structure |
+| [`ENV_SPECIFICATION.md`](docs/ENV_SPECIFICATION.md) | All environment variables with descriptions |
+| [`auth_spec.md`](docs/auth_spec.md) | NextAuth.js configuration + Guest Mode |
+| [`adr.md`](docs/adr.md) | Architecture Decision Records (8 ADRs) |
+| [`UI_COMPONENT_MAP.md`](docs/UI_COMPONENT_MAP.md) | UI wireframes, component hierarchy |
+| [`GLITCH_REPORT_SPEC.md`](docs/GLITCH_REPORT_SPEC.md) | Error display format, hint escalation |
+| [`CURRICULUM_OUTLINE.md`](docs/CURRICULUM_OUTLINE.md) | Content roadmap, quest progression |
+| [`USER_FLOWS.md`](docs/USER_FLOWS.md) | User stories and flows |
 
 <br />
 
@@ -347,7 +347,7 @@ git push origin feature/amazing-quest
 - [x] **Step 4** — Quest loader + hybrid grading engine (quest parser, test runner, submit flow)
 - [ ] **Step 5** — XP system + level-up rewards
 
-See [`roadmap.md`](roadmap.md) for detailed phase tracking and [`pre_dev_checklist.md`](pre_dev_checklist.md) for task-level status.
+See [`roadmap.md`](docs/roadmap.md) for detailed phase tracking and [`pre_dev_checklist.md`](docs/pre_dev_checklist.md) for task-level status.
 
 <br />
 
